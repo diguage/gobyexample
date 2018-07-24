@@ -30,6 +30,9 @@ func main() {
 	l = s[2:]
 	fmt.Println("sl3:", l)
 
+	l = s[:]
+	fmt.Println("sl4:", l)
+
 	t := []string{"g", "h", "i", "j", "k"}
 	fmt.Println("dcl:", t)
 
