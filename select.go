@@ -11,12 +11,12 @@ func main() {
 
 	rand.Seed(time.Now().UTC().UnixNano())
 	go func() {
-		time.Sleep(rand.Int31n(5) * time.Second)
+		time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
 		c1 <- "one"
 	}()
 
 	go func() {
-		time.Sleep(rand.Int31n(5) * time.Second)
+		time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
 		c2 <- "two"
 	}()
 
