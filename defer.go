@@ -18,4 +18,12 @@ func createFile(p string) *os.File {
 	return f
 }
 
-func writeFile(f *os.Fi)
+func writeFile(f *os.File) {
+	fmt.Println("Writing…")
+	fmt.Fprintln(f, "Hello, D瓜哥！")
+}
+
+func closeFile(f *os.File) {
+	fmt.Println("Closing…")
+	f.Close()
+}
